@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <title>Match Match Game</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <section class="header">
+      <div class="option">
+        <label>Back</label> 
+        <select name="back" id="back">
+          <option value="1">pic1</option>
+          <option value="2">pic2</option>
+          <option value="3">pic3</option>
+        </select>
+      </div>
+      <div class="option">
+        <label>Difficulty</label>
+        <select name="difficulty" id="difficulty">
+          <option value="10">Low</option>
+          <option value="16">Medium</option>
+          <option value="24">Hight</option>
+        </select>
+      </div>
+      <p id="fullName"></p>
+      <button id="start">New Game</button>
+      <p class="timer" id="timer"></p>
+    </section>
+    <section class="congrats" id="congrats">
+      <div>
+        <p>You have done it! Congrats!</p>
+        <table class="scores" id="scores"></table>
+        <button id="restart">Play more</button>
+      </div>
+    </section>
+    <section class="welcome" id="welcome">
+      <div class="rules">
+        <h2>How to play:</h2>
+        <p>Match Match is "find a pair" type of game.</p>
+        <h2>To play</h2>
+        <ol>
+          <li>Select two cards trying to match their pictures.</li>
+          <li>If you match them right - they will dissappear.</li>
+          <li>If cards don't match - they will be turned back.</li>
+          <li>You need to find all pairs to win.</li>
+          <li>Good luck and have fun!</li>
+        </ol>
+      </div>
+      <div class="inputs" id="inputs">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="LastName">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        <button id="apply">Apply</button>
+      </div>
+    </section>
+    <section class="gameFieldWrapper" id="gameFieldWrapper">
+    </section>
+  </div>
+</body>
+<script src="./js/Match.js"></script>
+<script>const m = new Match()</script>
+
+</html>

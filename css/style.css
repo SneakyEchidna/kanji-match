@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  background-color: darkseagreen;
+}
+button {
+  padding: 5px;
+  background-color: rgb(200, 238, 112);
+  border: none;
+  border-radius: 5px;
+}
+input {
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+}
+select {
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(200, 238, 112);
+  padding: 5px;
+}
+p {
+  padding: 5px;
+}
+h2 {
+  margin: 5px;
+}
+ol {
+  position: relative;
+  left: 36%;
+  text-align: left;
+}
+p.timer {
+  color: rgb(200, 238, 112);
+}
+
+.gameField {
+  margin: 5%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.card {
+  width: 100pt;
+  height: 100pt;
+  display: block;
+  margin: 5px 5px;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  visibility: visible;
+}
+
+.card figure {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid grey;
+  font-size: 95px;
+}
+
+.card .front {
+  background: white;
+  transform: rotateY(180deg);
+  visibility: inherit;
+}
+
+.card .back {
+  background: red;
+  visibility: inherit;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card.hide {
+  visibility: hidden;
+  opacity: 0;
+  position: relative;
+  transition: opacity 1s, visibility 1s linear;
+}
+
+.congrats {
+  border-radius: 5px;
+  position: absolute;
+  z-index: 2;
+  top: 200px;
+  left: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background: darkturquoise;
+}
+.inputs {
+  position: relative;
+  margin: 2% auto;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+.inputs button {
+  margin: 5%;
+}
+.header {
+  padding: 2%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.scores {
+  border-spacing: 10px;
+}
